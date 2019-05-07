@@ -1,0 +1,27 @@
+{
+  "name": "online-listener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/online-listener.umd.js",
+  "module": "dist/online-listener.esm.js",
+  "author": "Justin McMurdie",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "watch": "rollup -c --watch"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "browserslist-config-canopy": "^3.1.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.10.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-babel-minify": "^8.0.0",
+    "rollup-plugin-node-resolve": "^4.2.3"
+  }
+}
