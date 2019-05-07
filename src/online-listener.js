@@ -13,4 +13,4 @@ function updateOnlineStatus (evt) {
 window.addEventListener('online', updateOnlineStatus)
 window.addEventListener('offline', updateOnlineStatus)
 
-export const online$ = onlineSubject$
+export const online$ = onlineSubject$.asObservable()
