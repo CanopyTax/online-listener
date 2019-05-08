@@ -1,6 +1,6 @@
 {
   "name": "online-listener",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RXJS Observable based tool to identify when your browser if offline/online",
   "main": "dist/online-listener.umd.js",
   "module": "dist/online-listener.esm.js",
