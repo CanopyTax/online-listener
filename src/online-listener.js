@@ -14,7 +14,3 @@ window.addEventListener('online', updateOnlineStatus)
 window.addEventListener('offline', updateOnlineStatus)
 
 export const online$ = onlineSubject$.asObservable()
-
-const poll$ = interval(1000).pipe(
-
-)
