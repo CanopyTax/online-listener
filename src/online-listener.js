@@ -1,4 +1,4 @@
-import { ReplaySubject } from 'rxjs'
+import { ReplaySubject, interval } from 'rxjs'
 
 const onlineSubject$ = new ReplaySubject(1)
 
@@ -14,3 +14,7 @@ window.addEventListener('online', updateOnlineStatus)
 window.addEventListener('offline', updateOnlineStatus)
 
 export const online$ = onlineSubject$.asObservable()
+
+const poll$ = interval(1000).pipe(
+
+)

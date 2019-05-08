@@ -1,15 +1,24 @@
 {
   "name": "online-listener",
   "version": "1.0.0",
-  "description": "",
+  "description": "RXJS Observable based tool to identify when your browser if offline/online",
   "main": "dist/online-listener.umd.js",
   "module": "dist/online-listener.esm.js",
+  "repository": "git@github.com:CanopyTax/online-listener.git",
   "author": "Justin McMurdie",
   "license": "MIT",
+  "keywords": [
+    "offline",
+    "event",
+    "RXJS"
+  ],
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "watch": "rollup -c --watch"
   },
+  "browserslist": [
+    "extends browserslist-config-canopy"
+  ],
   "peerDependencies": {
     "rxjs": "^6.5.1"
   },
