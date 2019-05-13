@@ -18,6 +18,7 @@ function updateOnlineStatus (evt) {
 }
 
 window.addEventListener('offline', updateOnlineStatus)
+window.addEventListener('online', () => createPoll())
 
 function checkIfOnline () {
   if (urlToHit) {
@@ -33,17 +34,11 @@ function checkIfOnline () {
 
 let pollingSubscription
 
-const isOfflineSub = online$.pipe(
-  filter(onlineBool => onlineBool === false),
-  tap(() => createPoll())
-).subscribe()
-
 function createPoll() {
   clearPoll()
   pollingSubscription = interval(1000).pipe(
-    tap(() => pollCount++),
     filter((i) => {
-      if (pollCount === 1) {
+      if (pollCount === 0) {
         return true
       } else if (i <= 15) {
         return i % 5 === 0
