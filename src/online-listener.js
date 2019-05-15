@@ -12,8 +12,8 @@ let urlToHit
 onlineSubject$.next(true)
 
 function updateOnlineStatus (evt) {
-  if (navigator && navigator.online != undefined) {
-    onlineSubject$.next(navigator.online)
+  if (navigator && navigator.onLine != undefined) {
+    onlineSubject$.next(navigator.onLine)
   }
 }
 
