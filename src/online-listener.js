@@ -38,7 +38,7 @@ function createPoll() {
   clearPoll()
   pollingSubscription = interval(1000).pipe(
     filter((i) => {
-      if (pollCount === 0) {
+      if (i === 0) {
         return true
       } else if (i <= 15) {
         return i % 5 === 0
