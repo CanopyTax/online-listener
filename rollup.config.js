@@ -19,6 +19,7 @@ export default [
       file: 'dist/online-listener.esm.js',
       format: 'esm',
       sourcemap: true,
+      external: ['rxjs', 'rxjs/operators']
     },
   }),
   Object.assign({}, config, {
@@ -27,9 +28,7 @@ export default [
       format: 'umd',
       name: 'online-listener',
       sourcemap: true,
-      globals: {
-        'rxjs': 'rxjs',
-      }
+      external: ['rxjs', 'rxjs/operators']
     },
   }),
 ]
