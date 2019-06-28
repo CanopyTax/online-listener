@@ -9,7 +9,7 @@ const onlineSubject$ = new ReplaySubject(1)
 const online$ = onlineSubject$.asObservable()
 let urlToHit
 
-onlineSubject$.next(true)
+onlineSubject$.next(navigator.onLine)
 
 function updateOnlineStatus (evt) {
   if (navigator && navigator.onLine != undefined) {
